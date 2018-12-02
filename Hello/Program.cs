@@ -7,11 +7,45 @@ namespace Hello
     {
         static void Main(string[] args)
         {
-            Console.Write("Wpisz swoje imie ");
-            string name = Console.ReadLine();
-            Console.WriteLine("Witaj, " + name);
+            ValueType();
 
-            Console.Write("Podaj ile masz lat");
+            for (; ; )
+            {
+                Greeting();
+                Age();
+                Settings();
+            }
+        }
+
+        private static void ValueType()
+        {
+            int maxInt = int.MaxValue;
+            int minInt = int.MinValue;
+            long maxLong = long.MaxValue;
+            long minLong = long.MinValue;
+
+            Console.WriteLine("maxInt=" + maxInt);
+            Console.WriteLine("minInt=" + minInt);
+            Console.WriteLine("maxLong=" + maxLong);
+            Console.WriteLine("maxLong=" + minLong);
+        }
+
+        /// <summary>
+        /// Ustawia color skonsoli 
+        /// </summary>
+        private static void Settings()
+        {
+            Console.ReadKey();
+            Console.Clear();
+            Console.ResetColor();
+        }
+        
+        /// <summary>
+        /// Sprawdza podany wiek
+        /// </summary>
+        private static void Age()
+        {
+            Console.Write("Podaj ile masz lat ");
 
             int age;
             bool resault = int.TryParse(Console.ReadLine(), out age);
@@ -21,7 +55,7 @@ namespace Hello
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Brawo! Jesteś pełnoletni, możesz wypić browara");
             }
-            else if (resault==false)
+            else if (resault == false)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Wprowadziłeś nie poprawny wiek!");
@@ -32,9 +66,16 @@ namespace Hello
                 Console.WriteLine("Możemy Ci zoproponować jedynie mleko");
 
             }
-            Console.ReadKey();
         }
-
         
+        /// <summary>
+        /// Wypisujemy powitanie użytkownika
+        /// </summary>
+        private static void Greeting()
+        {
+            Console.Write("Wpisz swoje imie ");
+            string name = Console.ReadLine();
+            Console.WriteLine("Witaj, " + name);
+        }
     }
 }
