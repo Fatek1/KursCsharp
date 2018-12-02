@@ -8,7 +8,7 @@ namespace Hello
         static void Main(string[] args)
         {
             string name = args[0];
-
+            
             //Console.WriteLine("Witaj");
             Console.WriteLine("Witaj " + name);
         }
