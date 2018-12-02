@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Hello
 {
@@ -10,7 +7,9 @@ namespace Hello
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Witaj Swiecie");
+            string name = args[0];
+
+            Console.WriteLine("Witaj " + name);
 
         }
     }
