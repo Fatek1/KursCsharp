@@ -9,8 +9,8 @@ namespace Hello
         {
             string name = args[0];
 
+            //Console.WriteLine("Witaj");
             Console.WriteLine("Witaj " + name);
-
         }
     }
 }
