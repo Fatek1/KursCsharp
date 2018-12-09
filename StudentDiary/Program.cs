@@ -20,6 +20,7 @@ namespace StudentDiary
             //float min = diary.GivMinRating();
 
 
+            
 
 
             for (; ; )
