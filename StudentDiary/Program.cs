@@ -21,6 +21,7 @@ namespace StudentDiary
 
 
 
+
             for (; ; )
             {
                 Console.WriteLine("Podaj ocenę od 0 do 10");
